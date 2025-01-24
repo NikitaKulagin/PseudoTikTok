@@ -290,7 +290,16 @@ def main():
 
 # Функция для обновления только части файла между маркерами
 def update_architecture_md(content_lines):
-    
+    """
+    Обновляет файл ARCHITECTURE.md, вставляя автоматически сгенерированное содержимое
+    между спец маркерами.
+    Если такие маркеры уже существуют, содержимое между ними будет заменено на новое.
+    Если маркеры отсутствуют, они будут добавлены в конец файла.
+
+    Параметры:
+        content_lines (list): Список строк с автоматически сгенерированным содержанием для вставки в файл.
+    """
+
     root_dir = os.path.dirname(os.path.abspath(__file__))
     arch_file = os.path.join(root_dir, "ARCHITECTURE.md")
     auto_gen_start = '<!-- AUTO-GENERATED-CONTENT:START -->'

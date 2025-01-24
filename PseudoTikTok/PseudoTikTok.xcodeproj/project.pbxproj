@@ -11,7 +11,7 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		F4F488822D42664C006E17CC /* Exceptions for "PseudoTikTok" folder in "PseudoTikTok" target */ = {
+		F4F4889F2D43F579006E17CC /* Exceptions for "PseudoTikTok" folder in "PseudoTikTok" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
 				Info.plist,
@@ -21,10 +21,10 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		F4F488722D42664B006E17CC /* PseudoTikTok */ = {
+		F4F488972D43F579006E17CC /* PseudoTikTok */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
-				F4F488822D42664C006E17CC /* Exceptions for "PseudoTikTok" folder in "PseudoTikTok" target */,
+				F4F4889F2D43F579006E17CC /* Exceptions for "PseudoTikTok" folder in "PseudoTikTok" target */,
 			);
 			path = PseudoTikTok;
 			sourceTree = "<group>";
@@ -45,7 +45,7 @@
 		F4F488672D42664B006E17CC = {
 			isa = PBXGroup;
 			children = (
-				F4F488722D42664B006E17CC /* PseudoTikTok */,
+				F4F488972D43F579006E17CC /* PseudoTikTok */,
 				F4F488712D42664B006E17CC /* Products */,
 			);
 			sourceTree = "<group>";
@@ -74,7 +74,7 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				F4F488722D42664B006E17CC /* PseudoTikTok */,
+				F4F488972D43F579006E17CC /* PseudoTikTok */,
 			);
 			name = PseudoTikTok;
 			packageProductDependencies = (

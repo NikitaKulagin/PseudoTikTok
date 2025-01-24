@@ -10,8 +10,13 @@
 ### Папка: `.`
 Содержимые файлы:
 - ARCHITECTURE.md
+- Context.docx
+- Context.pdf
 - README.md
+- TikTok 8h MVP plan.docx
+- TikTok 8h MVP plan.pdf
 - update_architecture.py
+- ~$kTok 8h MVP plan.docx
 
 **Детали по файлам (Swift/Python):**
 - **Файл**: `update_architecture.py` (язык: python)
@@ -21,6 +26,7 @@
     - *Описание:* Парсим Python-файл для извлечения классов/функций и их docstrings (если сразу после объявления). Возвращает список словарей вида: [ { "type": "class" or "def", "name": "имя", "description": "docstring", }, ... ]
   - Def: **main**
   - Def: **update_architecture_md**
+    - *Описание:* Обновляет файл ARCHITECTURE.md, вставляя автоматически сгенерированное содержимое между спец маркерами. Если такие маркеры уже существуют, содержимое между ними будет заменено на новое. Если маркеры отсутствуют, они будут добавлены в конец файла.  Параметры: content_lines (list): Список строк с автоматически сгенерированным содержанием для вставки в файл.
 
 ### Папка: `PseudoTikTok`
 *(Нет файлов)*
@@ -99,6 +105,17 @@
 Содержимые файлы:
 - LaunchScreen.storyboard
 - Main.storyboard
+
+### Папка: `PseudoTikTok/PseudoTikTok/Core`
+Содержимые файлы:
+- UserModel.swift
+- VideoModel.swift
+
+**Детали по файлам (Swift/Python):**
+- **Файл**: `VideoModel.swift` (язык: swift)
+  - Struct: **Video**
+- **Файл**: `UserModel.swift` (язык: swift)
+  - Struct: **User**
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
