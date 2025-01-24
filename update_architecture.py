@@ -244,10 +244,10 @@ def main():
 
     # Формируем содержимое ARCHITECTURE.md
     lines = []
-    lines.append("# ARCHITECTURE.md\n")
-    lines.append("Данный файл описывает структуру проекта, файлы, а также краткие описания\n")
-    lines.append("(docstrings/комментарии) для классов, структур и функций.\n")
-    lines.append("\n## 1. Структура каталогов и список файлов\n")
+    #lines.append("# ARCHITECTURE.md\n")
+    #lines.append("Данный файл описывает структуру проекта, файлы, а также краткие описания\n")
+    #lines.append("(docstrings/комментарии) для классов, структур и функций.\n")
+    #lines.append("\n## 1. Структура каталогов и список файлов\n")
 
     for path_key in sorted(structure_data.keys()):
         lines.append(f"### Папка: `{path_key}`")
@@ -277,20 +277,69 @@ def main():
                         lines.append(f"    - *Описание:* {description}")
         lines.append("")
 
-    lines.append("## 2. Описание модулей и блоков\n")
-    lines.append("В этом разделе можно перечислить или вручную дополнять модули (Core, UI, Networking и т.д.)\n")
-    lines.append("и их взаимосвязи. Пример:\n")
-    lines.append("- **Core**: модели данных, бизнес-логика.\n")
-    lines.append("- **Networking**: сетевые запросы, взаимодействие с сервером.\n")
-    lines.append("- **UI**: экраны, контроллеры, View.\n")
-    lines.append("- **Services**: сервисы (аутентификация, аналитика, ...).\n")
+    #lines.append("## 2. Описание модулей и блоков\n")
+    #lines.append("В этом разделе можно перечислить или вручную дополнять модули (Core, UI, Networking и т.д.)\n")
+    #lines.append("и их взаимосвязи. Пример:\n")
+    #lines.append("- **Core**: модели данных, бизнес-логика.\n")
+    #lines.append("- **Networking**: сетевые запросы, взаимодействие с сервером.\n")
+    #lines.append("- **UI**: экраны, контроллеры, View.\n")
+    #lines.append("- **Services**: сервисы (аутентификация, аналитика, ...).\n")
 
-    # Записываем в ARCHITECTURE.md
-    with open(arch_file, "w", encoding="utf-8") as arch:
-        arch.write("\n".join(lines))
+    return lines
+
+
+# Функция для обновления только части файла между маркерами
+def update_architecture_md(content_lines):
+    
+    root_dir = os.path.dirname(os.path.abspath(__file__))
+    arch_file = os.path.join(root_dir, "ARCHITECTURE.md")
+    auto_gen_start = '<!-- AUTO-GENERATED-CONTENT:START -->'
+    auto_gen_end = '<!-- AUTO-GENERATED-CONTENT:END -->'
+
+    new_auto_content = "\n".join(content_lines)
+
+    # Проверяем, существует ли файл ARCHITECTURE.md
+    if os.path.exists(arch_file):
+        with open(arch_file, "r", encoding="utf-8") as f:
+            existing_content = f.read()
+    else:
+        # Если файл не существует, создаем базовый шаблон
+        existing_content = f"# ARCHITECTURE.md\n\n{auto_gen_start}\n{auto_gen_end}\n"
+
+    # Ищем маркеры в существующем контенте
+    pattern = re.compile(
+        r'(?P<before>.*?){start_marker}.*?{end_marker}(?P<after>.*)'.format(
+            start_marker=re.escape(auto_gen_start),
+            end_marker=re.escape(auto_gen_end)
+        ),
+        re.DOTALL
+    )
+
+    match = pattern.match(existing_content)
+    if match:
+        # Обновляем содержимое между маркерами
+        updated_content = "{before}{start}\n{content}\n{end}{after}".format(
+            before=match.group('before'),
+            start=auto_gen_start,
+            content=new_auto_content,
+            end=auto_gen_end,
+            after=match.group('after')
+        )
+    else:
+        # Если маркеры не найдены, добавляем их в конец файла
+        updated_content = existing_content + "\n{start}\n{content}\n{end}\n".format(
+            start=auto_gen_start,
+            content=new_auto_content,
+            end=auto_gen_end
+        )
+
+    # Записываем обновленный контент в файл
+    with open(arch_file, "w", encoding="utf-8") as f:
+        f.write( updated_content )
 
     print(f"[OK] Файл ARCHITECTURE.md успешно обновлён в {arch_file}")
 
 
 if __name__ == "__main__":
-    main()
+    lines = main( )
+    update_architecture_md( lines )
