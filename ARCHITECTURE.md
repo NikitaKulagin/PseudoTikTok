@@ -122,3 +122,23 @@
 2. **Feed of Videos**
 3. **Ability to Upload Short Videos**
 4. **Viewing and Liking Videos**
+
+## 4. Data Models (Модели данных)
+
+В этом разделе описываются основные сущности данных приложения.
+
+### **User**
+
+- `userID` (String): Уникальный идентификатор пользователя.
+- `username` (String): Имя пользователя.
+- `email` (String): Электронная почта.
+- `profilePictureURL` (String, опционально): Ссылка на аватар пользователя.
+
+### **Video**
+
+- `videoID` (String): Уникальный идентификатор видео.
+- `userID` (String): Идентификатор пользователя, загрузившего видео.
+- `videoURL` (String): Ссылка на видео в Firebase Storage.
+- `description` (String): Описание видео.
+- `likesCount` (Int): Количество лайков.
+- `timestamp` (Date): Время загрузки видео.
