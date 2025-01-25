@@ -12,11 +12,14 @@
 - ARCHITECTURE.md
 - Context.docx
 - Context.pdf
+- NetworkingService.pdf
 - README.md
 - TikTok 8h MVP plan.docx
 - TikTok 8h MVP plan.pdf
+- UserModel.pdf
 - update_architecture.py
 - ~$kTok 8h MVP plan.docx
+- ~$ontext.docx
 
 **Детали по файлам (Swift/Python):**
 - **Файл**: `update_architecture.py` (язык: python)
@@ -34,6 +37,7 @@
 ### Папка: `PseudoTikTok/PseudoTikTok`
 Содержимые файлы:
 - AppDelegate.swift
+- GoogleService-Info.plist
 - Info.plist
 - SceneDelegate.swift
 - ViewController.swift
@@ -67,7 +71,8 @@
 *(Нет файлов)*
 
 ### Папка: `PseudoTikTok/PseudoTikTok.xcodeproj/project.xcworkspace/xcshareddata/swiftpm`
-*(Нет файлов)*
+Содержимые файлы:
+- Package.resolved
 
 ### Папка: `PseudoTikTok/PseudoTikTok.xcodeproj/project.xcworkspace/xcshareddata/swiftpm/configuration`
 *(Нет файлов)*
@@ -113,9 +118,21 @@
 
 **Детали по файлам (Swift/Python):**
 - **Файл**: `VideoModel.swift` (язык: swift)
-  - Struct: **Video**
+  - Struct: **VideoModel**
 - **Файл**: `UserModel.swift` (язык: swift)
   - Struct: **User**
+
+### Папка: `PseudoTikTok/PseudoTikTok/Networking`
+Содержимые файлы:
+- NetworkingService.swift
+
+**Детали по файлам (Swift/Python):**
+- **Файл**: `NetworkingService.swift` (язык: swift)
+  - Class: **NetworkingService**
+  - Func: **uploadVideo**
+    - *Описание:* Метод для загрузки видео в Firebase Storage и сохранения информации в Firestore
+  - Func: **fetchVideos**
+    - *Описание:* Вспомогательный метод для сохранения информации о видео в Firestore Метод для получения списка видео из Firestore
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 

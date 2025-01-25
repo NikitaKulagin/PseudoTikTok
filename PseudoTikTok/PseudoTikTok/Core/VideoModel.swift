@@ -10,7 +10,7 @@
 
 import Foundation
 
-struct Video {
+struct VideoModel {
     let videoID: String
     let userID: String
     let videoURL: String
