@@ -20,6 +20,7 @@
 - TikTok 8h MVP plan.docx
 - TikTok 8h MVP plan.pdf
 - UserModel.pdf
+- VideoModel.pdf
 - update_architecture.py
 - ~$kTok 8h MVP plan.docx
 - ~$ontext.docx
@@ -142,10 +143,19 @@
 - HomeViewController.swift
 - MainTabBarController.swift
 - ProfileViewController.swift
+- VideoCell.swift
 
 **Детали по файлам (Swift/Python):**
+- **Файл**: `VideoCell.swift` (язык: swift)
+  - Class: **VideoCell**
+  - Func: **setupViews**
+  - Func: **configure**
 - **Файл**: `HomeViewController.swift` (язык: swift)
   - Class: **HomeViewController**
+  - Func: **setupCollectionView**
+  - Func: **loadVideos**
+  - Func: **collectionView**
+  - Func: **collectionView**
 - **Файл**: `MainTabBarController.swift` (язык: swift)
   - Class: **MainTabBarController**
 - **Файл**: `ProfileViewController.swift` (язык: swift)
