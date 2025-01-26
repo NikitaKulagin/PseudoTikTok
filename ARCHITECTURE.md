@@ -10,10 +10,13 @@
 ### Папка: `.`
 Содержимые файлы:
 - ARCHITECTURE.md
+- AppDelegate.pdf
 - Context.docx
 - Context.pdf
+- HomeViewController.pdf
 - NetworkingService.pdf
 - README.md
+- SceneDelegate.pdf
 - TikTok 8h MVP plan.docx
 - TikTok 8h MVP plan.pdf
 - UserModel.pdf
@@ -133,6 +136,20 @@
     - *Описание:* Метод для загрузки видео в Firebase Storage и сохранения информации в Firestore
   - Func: **fetchVideos**
     - *Описание:* Вспомогательный метод для сохранения информации о видео в Firestore Метод для получения списка видео из Firestore
+
+### Папка: `PseudoTikTok/PseudoTikTok/UI`
+Содержимые файлы:
+- HomeViewController.swift
+- MainTabBarController.swift
+- ProfileViewController.swift
+
+**Детали по файлам (Swift/Python):**
+- **Файл**: `HomeViewController.swift` (язык: swift)
+  - Class: **HomeViewController**
+- **Файл**: `MainTabBarController.swift` (язык: swift)
+  - Class: **MainTabBarController**
+- **Файл**: `ProfileViewController.swift` (язык: swift)
+  - Class: **ProfileViewController**
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
