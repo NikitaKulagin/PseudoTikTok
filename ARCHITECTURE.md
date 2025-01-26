@@ -19,6 +19,7 @@
 - SceneDelegate.pdf
 - TikTok 8h MVP plan.docx
 - TikTok 8h MVP plan.pdf
+- UserModel and ProfileViewController.pdf
 - UserModel.pdf
 - VideoModel.pdf
 - update_architecture.py
@@ -160,6 +161,7 @@
   - Class: **MainTabBarController**
 - **Файл**: `ProfileViewController.swift` (язык: swift)
   - Class: **ProfileViewController**
+  - Func: **setupViews**
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
