@@ -15,12 +15,14 @@
 - Context.pdf
 - HomeViewController.pdf
 - NetworkingService.pdf
+- ProfileViewController.pdf
 - README.md
 - SceneDelegate.pdf
 - TikTok 8h MVP plan.docx
 - TikTok 8h MVP plan.pdf
 - UserModel and ProfileViewController.pdf
 - UserModel.pdf
+- VideoCell.pdf
 - VideoModel.pdf
 - update_architecture.py
 - ~$kTok 8h MVP plan.docx
@@ -155,13 +157,19 @@
   - Class: **HomeViewController**
   - Func: **setupCollectionView**
   - Func: **loadVideos**
+  - Func: **playVisibleVideo**
+  - Func: **pauseAllVideos**
   - Func: **collectionView**
   - Func: **collectionView**
+  - Func: **scrollViewDidEndDecelerating**
+  - Func: **scrollViewDidEndScrollingAnimation**
+  - Func: **scrollViewDidScroll**
 - **Файл**: `MainTabBarController.swift` (язык: swift)
   - Class: **MainTabBarController**
 - **Файл**: `ProfileViewController.swift` (язык: swift)
   - Class: **ProfileViewController**
   - Func: **setupViews**
+  - Func: **loadUserData**
 
 <!-- AUTO-GENERATED-CONTENT:END -->
 
